@@ -16,7 +16,8 @@ dashboard directly from the board.
 
 ## Files
 
-- `main.py`: board firmware and web server.
+- `main.py`: board boot flow, Wi-Fi, hardware, sensors, and status state.
+- `web_server.py`: dashboard HTML, HTTP routing, and response handling.
 - `wifi_config.py`: Wi-Fi SSID/password configuration.
 - `lcd_i2c.py`: HD44780 16x2 LCD driver over PCF8574 I2C.
 - `main_rtos.py`: older Lab 2 GPIO/I2C example kept for reference.
