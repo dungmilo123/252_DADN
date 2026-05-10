@@ -1,0 +1,8 @@
+{
+  "name": "Yolouno Lab",
+  "address": "/dev/cu.usbmodem1234561",
+  "sync_folder": ".",
+  "open_on_start": false,
+  "ctrl_c_on_connect": true,
+  "sync_file_types": ["py"]
+}

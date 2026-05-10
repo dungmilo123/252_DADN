@@ -1,0 +1,19 @@
+{
+  "pymakr.devices.configs": {
+    "serial:///dev/tty.usbmodem1234561": {
+      "adapterOptions": {
+        "chunkSize": 128,
+        "chunkDelay": 60
+      }
+    },
+    "serial:///dev/cu.usbmodem1234561": {
+      "adapterOptions": {
+        "chunkSize": 128,
+        "chunkDelay": 60
+      }
+    }
+  },
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingImports": "none"
+  }
+}
