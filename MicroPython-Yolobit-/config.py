@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+
+USE_BUILTIN_LED = False
+LED_GPIO = 2
+PIN_LED = "pin0"
+
+WIFI_SSID = "Lam"
+WIFI_PASSWORD = "asdfghjk"
+HTTP_PORT = 80
+WIFI_CONNECT_TIMEOUT_MS = 15000
+WIFI_RETRY_DELAY_MS = 30000
+STATUS_POLL_INTERVAL_MS = 2000
+SENSOR_INTERVAL_MS = 2000
+
+INTERVAL_TASK_WIFI_MS = 250
+INTERVAL_TASK_DASHBOARD_MS = 100
+
+INTERVAL_TASK1_MS = 1000
+INTERVAL_TASK2_MS = 500
+
+# Task kiểm thử thư viện lib (MQTT, NTP, AIOT, Event)
+INTERVAL_TASK_MQTT_MS = 5000
+INTERVAL_TASK_NTP_MS = 5000
+INTERVAL_TASK_AIOT_MS = 3000
+INTERVAL_TASK_EVENT_MS = 2000
+
+# Task AI
+INTERVAL_TASK_AI_MS = 3000
+# Task thu thập data (bật khi cần thu thập, tắt khi chạy AI)
+INTERVAL_TASK_COLLECT_MS = 2000
+
+# Tùy chọn MQTT cho task_mqtt (không dùng trong dashboard mặc định)
+# MQTT_SERVER = "mqtt.ohstem.vn"
+# MQTT_PORT = 1883
+# MQTT_USER = ""
+# MQTT_PASSWORD = ""

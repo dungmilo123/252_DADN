@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "pycom.pymakr"
+  ],
+  "unwantedRecommendations": [
+    "pycom.pymakr-preview"
+  ]
+}
