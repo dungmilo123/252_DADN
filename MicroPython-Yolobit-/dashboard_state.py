@@ -162,8 +162,7 @@ def set_display_mode(mode):
     if mode not in VALID_DISPLAY_MODES:
         return False
     state["display_mode"] = mode
-    if state["wifi"] == "connected":
-        apply_display_mode()
+    apply_display_mode()
     return True
 
 
@@ -175,7 +174,7 @@ def apply_display_mode():
             if hasattr(display, "clear"):
                 display.clear()
             else:
-                display.show(Image("00000:00000:00000:00000:00000"))
+                display.show(Image.HEART_SMALL)
         elif state["display_mode"] == "small_heart":
             display.show(Image.HEART_SMALL)
         else:
@@ -195,9 +194,9 @@ def show_wifi_connecting():
     _status_toggle = not _status_toggle
     try:
         if _status_toggle:
-            display.show(Image("00900:09990:99999:00900:00900"))
+            display.show(Image.HEART)
         else:
-            display.show(Image("00000:00900:09990:00900:00000"))
+            display.show(Image.HEART_SMALL)
     except Exception as e:
         set_error("Display status failed: {}".format(e))
 
@@ -206,7 +205,10 @@ def show_wifi_failed():
     if not _yolobit_ok:
         return
     try:
-        display.show(Image("90009:09090:00900:09090:90009"))
+        if hasattr(display, "clear"):
+            display.clear()
+        else:
+            display.show(Image.HEART_SMALL)
     except Exception as e:
         set_error("Display failure status failed: {}".format(e))
 
@@ -214,11 +216,4 @@ def show_wifi_failed():
 def show_ip(ip):
     if not _yolobit_ok:
         return
-    try:
-        if hasattr(display, "scroll"):
-            display.scroll(ip)
-        else:
-            display.show(Image.HEART)
-    except Exception as e:
-        set_error("Display IP failed: {}".format(e))
     apply_display_mode()
